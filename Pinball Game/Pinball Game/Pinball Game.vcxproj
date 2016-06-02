@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{55E43831-1958-452A-BA6D-439C4892A135}</ProjectGuid>
+    <RootNamespace>PinballGame</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(SolutionDir)\Pinball Game\include;$(SolutionDir)\Pinball Game\SFML-2.3.2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\Pinball Game\SFML-2.3.2\lib;$(LibraryPath)</LibraryPath>
+    <SourcePath>$(SolutionDir)\Pinball Game\source;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(SolutionDir)\Pinball Game\include;$(SolutionDir)\Pinball Game\SFML-2.3.2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\Pinball Game\SFML-2.3.2\lib;$(LibraryPath)</LibraryPath>
+    <SourcePath>$(SolutionDir)\Pinball Game\source;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Game\Game_Info\highscore.h" />
+    <ClInclude Include="include\Game\Game_Info\lives.h" />
+    <ClInclude Include="include\Game\Game_Info\player.h" />
+    <ClInclude Include="include\Game\Game_Info\score.h" />
+    <ClInclude Include="include\Game\Game_Main\background.h" />
+    <ClInclude Include="include\Game\Game_Main\game.h" />
+    <ClInclude Include="include\Game\Game_Objects\ball.h" />
+    <ClInclude Include="include\Game\Game_Objects\barriers.h" />
+    <ClInclude Include="include\Game\Game_Objects\bumper.h" />
+    <ClInclude Include="include\Game\Game_Objects\launcher.h" />
+    <ClInclude Include="include\Game\Game_Objects\paddle.h" />
+    <ClInclude Include="include\Game\Game_Objects\paddlescrew.h" />
+    <ClInclude Include="include\Game\Game_Objects\walls.h" />
+    <ClInclude Include="include\Graphics\circle.h" />
+    <ClInclude Include="include\Graphics\rectangle.h" />
+    <ClInclude Include="include\Graphics\shape.h" />
+    <ClInclude Include="include\Graphics\Texture\texturemanager.h" />
+    <ClInclude Include="include\Graphics\Windows\gamescreen.h" />
+    <ClInclude Include="include\Graphics\Windows\menuscreen.h" />
+    <ClInclude Include="include\Graphics\Windows\splashscreen.h" />
+    <ClInclude Include="include\Graphics\Windows\startscreen.h" />
+    <ClInclude Include="include\Math_Lib\vec2.h" />
+    <ClInclude Include="include\Physics\aabb.h" />
+    <ClInclude Include="include\Physics\collidable.h" />
+    <ClInclude Include="include\Physics\collisionmanager.h" />
+    <ClInclude Include="include\Physics\movable.h" />
+    <ClInclude Include="include\Physics\obb.h" />
+    <ClInclude Include="include\Utilities\filemanager.h" />
+    <ClInclude Include="include\Utilities\inputmanager.h" />
+    <ClInclude Include="include\Utilities\screenmanager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\Game\Game_Info\score.cpp" />
+    <ClCompile Include="source\Game\Game_Main\background.cpp" />
+    <ClCompile Include="source\Game\Game_Main\game.cpp" />
+    <ClCompile Include="source\Game\Game_Main\main.cpp" />
+    <ClCompile Include="source\Game\Game_Objects\ball.cpp" />
+    <ClCompile Include="source\Game\Game_Objects\barriers.cpp" />
+    <ClCompile Include="source\Game\Game_Objects\bumper.cpp" />
+    <ClCompile Include="source\Game\Game_Objects\launcher.cpp" />
+    <ClCompile Include="source\Game\Game_Objects\paddle.cpp" />
+    <ClCompile Include="source\Game\Game_Objects\paddlescrew.cpp" />
+    <ClCompile Include="source\Game\Game_Objects\walls.cpp" />
+    <ClCompile Include="source\Graphics\circle.cpp" />
+    <ClCompile Include="source\Graphics\rectangle.cpp" />
+    <ClCompile Include="source\Graphics\shape.cpp" />
+    <ClCompile Include="source\Graphics\Texture\texturemanager.cpp" />
+    <ClCompile Include="source\Graphics\Windows\gamescreen.cpp" />
+    <ClCompile Include="source\Math_Lib\vec2.cpp" />
+    <ClCompile Include="source\Physics\aabb.cpp" />
+    <ClCompile Include="source\Physics\collidable.cpp" />
+    <ClCompile Include="source\Physics\collisionmanager.cpp" />
+    <ClCompile Include="source\Physics\movable.cpp" />
+    <ClCompile Include="source\Physics\obb.cpp" />
+    <ClCompile Include="source\Utilities\screenmanager.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

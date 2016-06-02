@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Graphics">
+      <UniqueIdentifier>{f8fdb3dd-5dc9-457c-a4d8-a70dabb64c60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graphics\Shapes">
+      <UniqueIdentifier>{6952a9ed-2cfa-4fad-96bf-07c31ae04355}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graphics">
+      <UniqueIdentifier>{61c8bbb8-968b-4868-90bf-7e06a6e07d6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Physics">
+      <UniqueIdentifier>{09eccc8a-fb51-4cbf-8bbb-450f45fac383}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Physics">
+      <UniqueIdentifier>{32aa132e-e687-4363-887a-5af3aa8b566c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graphics\Shapes">
+      <UniqueIdentifier>{e84cf5b0-9987-4161-81ec-189d756434ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game">
+      <UniqueIdentifier>{4ca7ea9f-0351-46dd-8f3a-2da61a9c18e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game\Game Main">
+      <UniqueIdentifier>{35a3f8b0-29bf-4485-b123-902536ae4403}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Physics\Maths">
+      <UniqueIdentifier>{2b47be4b-f5b3-4ee5-b9c5-581c9e954073}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Physics\Math">
+      <UniqueIdentifier>{b70b0677-0f6c-4225-92e8-1c02e33a1fa3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game\Game Objects">
+      <UniqueIdentifier>{21fe0a30-0a09-4616-9b84-abed98cc2f79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game">
+      <UniqueIdentifier>{240865f5-0534-4f4f-b6d0-9b9813ebeda4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game\Game Objects">
+      <UniqueIdentifier>{606ca3c9-a89b-4410-9dbd-460d2fe3d453}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game\Game Info">
+      <UniqueIdentifier>{929181d5-1668-44a5-a2f8-b2ae0273fa25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game\Game Main">
+      <UniqueIdentifier>{f02d2c28-80f8-471c-89c9-b9ea4d97463b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utils">
+      <UniqueIdentifier>{d0e67df6-5e77-45a1-b7a7-48edeec9b3a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utils">
+      <UniqueIdentifier>{83d375ca-e299-4252-aa5d-00cb3a424660}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graphics\Windows">
+      <UniqueIdentifier>{38bd9fe0-9758-4315-8af0-37a37bd7ca4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graphics\Windows">
+      <UniqueIdentifier>{ac8aecb6-62f2-4bba-952a-577873dd1e76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graphics\Textures">
+      <UniqueIdentifier>{e7fc85c7-47eb-4bed-a523-45e9aa1c60c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graphics\Texture">
+      <UniqueIdentifier>{0017bdc9-3ab2-45ef-9063-228208b22a23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game\Game Info">
+      <UniqueIdentifier>{45d6873a-2340-4855-86fb-e696ec536989}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Math_Lib\vec2.h">
+      <Filter>Header Files\Physics\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\shape.h">
+      <Filter>Header Files\Graphics\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\circle.h">
+      <Filter>Header Files\Graphics\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Physics\collidable.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Physics\movable.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\rectangle.h">
+      <Filter>Header Files\Graphics\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Physics\aabb.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Physics\obb.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Physics\collisionmanager.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Game\Game_Info\highscore.h">
+      <Filter>Header Files\Game\Game Info</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Game\Game_Info\lives.h">
+      <Filter>Header Files\Game\Game Info</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Game\Game_Info\player.h">
+      <Filter>Header Files\Game\Game Info</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Game\Game_Info\score.h">
+      <Filter>Header Files\Game\Game Info</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Game\Game_Objects\ball.h">
+      <Filter>Header Files\Game\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Game\Game_Objects\barriers.h">
+      <Filter>Header Files\Game\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Game\Game_Objects\bumper.h">
+      <Filter>Header Files\Game\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Game\Game_Objects\paddle.h">
+      <Filter>Header Files\Game\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Game\Game_Objects\walls.h">
+      <Filter>Header Files\Game\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Game\Game_Main\game.h">
+      <Filter>Header Files\Game\Game Main</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Game\Game_Main\background.h">
+      <Filter>Header Files\Game\Game Main</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Utilities\screenmanager.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Utilities\filemanager.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Utilities\inputmanager.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\Windows\splashscreen.h">
+      <Filter>Header Files\Graphics\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\Windows\startscreen.h">
+      <Filter>Header Files\Graphics\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\Windows\menuscreen.h">
+      <Filter>Header Files\Graphics\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\Windows\gamescreen.h">
+      <Filter>Header Files\Graphics\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\Texture\texturemanager.h">
+      <Filter>Header Files\Graphics\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Game\Game_Objects\paddlescrew.h">
+      <Filter>Header Files\Game\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Game\Game_Objects\launcher.h">
+      <Filter>Header Files\Game\Game Objects</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\Graphics\shape.cpp">
+      <Filter>Source Files\Graphics\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Physics\movable.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Physics\collidable.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Physics\aabb.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Physics\obb.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Graphics\rectangle.cpp">
+      <Filter>Source Files\Graphics\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Graphics\circle.cpp">
+      <Filter>Source Files\Graphics\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Game\Game_Main\main.cpp">
+      <Filter>Source Files\Game\Game Main</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Math_Lib\vec2.cpp">
+      <Filter>Source Files\Physics\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Game\Game_Objects\ball.cpp">
+      <Filter>Source Files\Game\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Game\Game_Objects\bumper.cpp">
+      <Filter>Source Files\Game\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Game\Game_Objects\barriers.cpp">
+      <Filter>Source Files\Game\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Game\Game_Objects\walls.cpp">
+      <Filter>Source Files\Game\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Game\Game_Objects\paddle.cpp">
+      <Filter>Source Files\Game\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Game\Game_Main\background.cpp">
+      <Filter>Source Files\Game\Game Main</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Game\Game_Main\game.cpp">
+      <Filter>Source Files\Game\Game Main</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Physics\collisionmanager.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Utilities\screenmanager.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Graphics\Windows\gamescreen.cpp">
+      <Filter>Source Files\Graphics\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Graphics\Texture\texturemanager.cpp">
+      <Filter>Source Files\Graphics\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Game\Game_Objects\paddlescrew.cpp">
+      <Filter>Source Files\Game\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Game\Game_Objects\launcher.cpp">
+      <Filter>Source Files\Game\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Game\Game_Info\score.cpp">
+      <Filter>Source Files\Game\Game Info</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

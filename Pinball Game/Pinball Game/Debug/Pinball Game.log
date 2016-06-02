@@ -1,0 +1,9 @@
+﻿  gamescreen.cpp
+c:\users\tarkan\desktop\game development\pinball game\pinball game\include\game\game_main\game.h(20): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  game.cpp
+c:\users\tarkan\desktop\game development\pinball game\pinball game\include\game\game_main\game.h(20): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\tarkan\desktop\game development\pinball game\pinball game\source\game\game_main\game.cpp(145): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\tarkan\desktop\game development\pinball game\pinball game\source\game\game_main\game.cpp(155): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+  Pinball Game.vcxproj -> C:\Users\Tarkan\Desktop\Game Development\Pinball Game\Debug\Pinball Game.exe
+  Pinball Game.vcxproj -> C:\Users\Tarkan\Desktop\Game Development\Pinball Game\Debug\Pinball Game.pdb (Partial PDB)
