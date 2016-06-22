@@ -17,7 +17,7 @@
 #include<Game\Game_Objects\paddlescrew.h>
 #include<Game\Game_Objects\launcher.h>
 #include<Graphics\Texture\texturemanager.h>
-#include<Game\Game_Info\score.h>]
+#include<Game\Game_Info\score.h>
 #include<vector>
 
 class Game : public sf::Drawable
@@ -33,8 +33,9 @@ class Game : public sf::Drawable
 		void rotate(math::Vector2D point, math::Vector2D centre, float angle);
 		void checkCollision();
 		void resetBall();
-		bool gameEnd();
+		void gameEnd();
 		void restart(bool);
+		bool getIsEnded();
 
 		void firePaddle();
 		void resetPaddle();
@@ -64,6 +65,7 @@ class Game : public sf::Drawable
 
 
 		int totalScore;
+		bool m_IsEnded;
 		
 };
 #endif // !_GAME_H

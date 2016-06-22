@@ -2,6 +2,8 @@
 
 Game::Game()
 {
+
+	m_IsEnded = false;
 	// background
 	backgroundObject.resize(3);
 	backgroundObject.at(0) = Background((SCREEN_WIDTH / 2), (SCREEN_HEIGHT / 2), math::Vector2D((SCREEN_WIDTH / 2), (SCREEN_HEIGHT / 2)), 0);
@@ -216,21 +218,6 @@ void Game::resetPaddle()
 	paddleObject.at(1) = Paddle(50, 5, math::Vector2D(300, 870), 0);
 }
 
-bool Game::gameEnd()
-{
-	// end game phase to detect if the ball is out of bounds
-	if (ballObject.getPosition().getY() > SCREEN_HEIGHT)
-	{
-		return true;
-	}
-
-	else
-	{
-		// do nothing
-		return false;
-	}
-}
-
 void Game::updateMovable(float time)
 {
 	ballObject.updateMovable(time);
@@ -251,6 +238,26 @@ void Game::update()
 
 	centre = paddleScrewObject.at(0).getPosition();
 	rotate(point, centre, 20);
+}
+
+void Game::gameEnd()
+{
+	// end game phase to detect if the ball is out of bounds
+	if (ballObject.getPosition().getY() < SCREEN_HEIGHT)
+	{
+		m_IsEnded = true;
+	}
+
+	else
+	{
+		// do nothing
+		m_IsEnded = false;
+	}
+}
+
+bool Game::getIsEnded()
+{
+	return m_IsEnded;
 }
 
 void Game::rotate(math::Vector2D point, math::Vector2D centre, float angle)

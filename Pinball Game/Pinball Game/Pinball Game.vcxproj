@@ -143,8 +143,6 @@
     <ClInclude Include="include\Graphics\shape.h" />
     <ClInclude Include="include\Graphics\Texture\texturemanager.h" />
     <ClInclude Include="include\Graphics\Windows\gamescreen.h" />
-    <ClInclude Include="include\Graphics\Windows\menuscreen.h" />
-    <ClInclude Include="include\Graphics\Windows\splashscreen.h" />
     <ClInclude Include="include\Graphics\Windows\startscreen.h" />
     <ClInclude Include="include\Math_Lib\vec2.h" />
     <ClInclude Include="include\Physics\aabb.h" />
@@ -173,6 +171,7 @@
     <ClCompile Include="source\Graphics\shape.cpp" />
     <ClCompile Include="source\Graphics\Texture\texturemanager.cpp" />
     <ClCompile Include="source\Graphics\Windows\gamescreen.cpp" />
+    <ClCompile Include="source\Graphics\Windows\startscreen.cpp" />
     <ClCompile Include="source\Math_Lib\vec2.cpp" />
     <ClCompile Include="source\Physics\aabb.cpp" />
     <ClCompile Include="source\Physics\collidable.cpp" />

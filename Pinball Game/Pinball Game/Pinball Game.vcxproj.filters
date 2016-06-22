@@ -150,15 +150,6 @@
     <ClInclude Include="include\Utilities\inputmanager.h">
       <Filter>Header Files\Utils</Filter>
     </ClInclude>
-    <ClInclude Include="include\Graphics\Windows\splashscreen.h">
-      <Filter>Header Files\Graphics\Windows</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Graphics\Windows\startscreen.h">
-      <Filter>Header Files\Graphics\Windows</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Graphics\Windows\menuscreen.h">
-      <Filter>Header Files\Graphics\Windows</Filter>
-    </ClInclude>
     <ClInclude Include="include\Graphics\Windows\gamescreen.h">
       <Filter>Header Files\Graphics\Windows</Filter>
     </ClInclude>
@@ -170,6 +161,9 @@
     </ClInclude>
     <ClInclude Include="include\Game\Game_Objects\launcher.h">
       <Filter>Header Files\Game\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\Windows\startscreen.h">
+      <Filter>Header Files\Graphics\Windows</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -241,6 +235,9 @@
     </ClCompile>
     <ClCompile Include="source\Game\Game_Info\score.cpp">
       <Filter>Source Files\Game\Game Info</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Graphics\Windows\startscreen.cpp">
+      <Filter>Source Files\Graphics\Windows</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
