@@ -228,6 +228,17 @@ void Game::updateMovable(float time)
 	{
 		paddleObject.at(i).updateMovable(time);
 	}
+
+	for (int i = 0; i < 2; ++i)
+	{
+		if (paddleObject.at(i).getPosition().getY() <= (800))
+			{
+				paddleObject.at(i).setVelocity(math::Vector2D(0, 0));
+				paddleObject.at(i).setAcceleration(math::Vector2D(0, 0));
+				paddleObject.at(i).setPosition(math::Vector2D(paddleObject.at(i).getPosition().getX(), 800));
+			}
+	}
+	
 }
 
 void Game::update()
