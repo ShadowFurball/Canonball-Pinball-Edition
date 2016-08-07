@@ -239,5 +239,11 @@
     <ClCompile Include="source\Graphics\Windows\startscreen.cpp">
       <Filter>Source Files\Graphics\Windows</Filter>
     </ClCompile>
+    <ClCompile Include="source\Utilities\inputmanager.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Game\Game_Info\lives.cpp">
+      <Filter>Source Files\Game\Game Info</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

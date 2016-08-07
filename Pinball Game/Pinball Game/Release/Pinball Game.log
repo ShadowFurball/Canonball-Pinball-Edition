@@ -1,10 +1,13 @@
 ﻿  game.cpp
-source\Game\Game_Main\game.cpp(147): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-source\Game\Game_Main\game.cpp(157): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+source\Game\Game_Main\game.cpp(155): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+source\Game\Game_Main\game.cpp(165): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  main.cpp
+  gamescreen.cpp
+  screenmanager.cpp
   Generating code
-  2 of 1003 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+  26 of 1014 functions ( 2.6%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    10 functions had inline decision re-evaluated but remain unchanged
+    11 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Pinball Game.vcxproj -> C:\Users\Tarkan\Desktop\Game-Development\Canonball-Pinball-Edition\Pinball Game\Release\Pinball Game.exe
   Pinball Game.vcxproj -> C:\Users\Tarkan\Desktop\Game-Development\Canonball-Pinball-Edition\Pinball Game\Release\Pinball Game.pdb (Full PDB)

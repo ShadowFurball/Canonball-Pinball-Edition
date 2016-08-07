@@ -1,8 +1,10 @@
 #include<Game\Game_Main\game.h>
 
+#define ARISTA "font\\Arista.TTF"
+#define DYMOGBE "font\\DYMOGBE_.TTF"
+
 Game::Game()
 {
-
 	m_IsEnded = false;
 	// background
 	backgroundObject.resize(3);
@@ -110,6 +112,12 @@ Game::Game()
 
 	score.setText("Score", math::Vector2D(950, 130));
 	score.setScoreText(score.getScore(), math::Vector2D(950, 170));
+
+	//displayLives.stringToBeDisplayed("Lives");
+	//displayLives.setTextAttributes(displayLives.assignFont(ARISTA), sf::Color::Black, 40, math::Vector2D(950, 210));
+	//displayLives.intToString(3);
+	//displayLives.setTextAttributes(displayLives.assignFont(DYMOGBE), sf::Color::Black, 40, math::Vector2D(950, 260));
+
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// textures
@@ -313,6 +321,7 @@ void Game::draw(sf::RenderTarget &target, sf::RenderStates states) const
 	target.draw(gameInfo);
 	target.draw(scoreFrame);
 	target.draw(score);
+	//target.draw(displayLives);
 	target.draw(ballObject);
 	target.draw(canonball);
 

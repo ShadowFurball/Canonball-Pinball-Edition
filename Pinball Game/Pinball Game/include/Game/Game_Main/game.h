@@ -17,6 +17,8 @@
 #include<Game\Game_Objects\paddlescrew.h>
 #include<Game\Game_Objects\launcher.h>
 #include<Graphics\Texture\texturemanager.h>
+#include <Utilities\inputmanager.h>
+#include <Game\Game_Info\lives.h>
 #include<Game\Game_Info\score.h>
 #include<vector>
 
@@ -62,6 +64,7 @@ class Game : public sf::Drawable
 		std::vector<PaddleScrew> paddleScrewObject;
 		Launcher launcherObject;
 		void load_textures();
+		//InputManager displayLives;
 
 
 		int totalScore;

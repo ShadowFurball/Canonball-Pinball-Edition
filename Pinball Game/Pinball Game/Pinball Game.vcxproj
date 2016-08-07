@@ -155,6 +155,7 @@
     <ClInclude Include="include\Utilities\screenmanager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="source\Game\Game_Info\lives.cpp" />
     <ClCompile Include="source\Game\Game_Info\score.cpp" />
     <ClCompile Include="source\Game\Game_Main\background.cpp" />
     <ClCompile Include="source\Game\Game_Main\game.cpp" />
@@ -178,6 +179,7 @@
     <ClCompile Include="source\Physics\collisionmanager.cpp" />
     <ClCompile Include="source\Physics\movable.cpp" />
     <ClCompile Include="source\Physics\obb.cpp" />
+    <ClCompile Include="source\Utilities\inputmanager.cpp" />
     <ClCompile Include="source\Utilities\screenmanager.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
