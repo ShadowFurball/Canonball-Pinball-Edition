@@ -1,7 +1,7 @@
 #include<Game\Game_Main\game.h>
 
-#define ARISTA "font\\Arista.TTF"
-#define DYMOGBE "font\\DYMOGBE_.TTF"
+#define ARISTA "font\\Arista.TTF" // FONTS FOR THE INPUT MANAGER BUT CURRENTLY NOT IN USE
+#define DYMOGBE "font\\DYMOGBE_.TTF" // FONTS FOR THE INPUT MANAGER BUT CURRENTLY NOT IN USE
 
 Game::Game()
 {
@@ -30,7 +30,7 @@ Game::Game()
 	wallObject.at(2).setMass(wallObject.at(0).getDensity());
 
 	// barriers
-	barrierObject.resize(10);
+	barrierObject.resize(11);
 	// barrier between the game map and launcher
 	barrierObject.at(0) = Barrier(5, 400, math::Vector2D(745, 590), 0);
 	barrierObject.at(0).setElasticity(0.6f);
@@ -113,11 +113,14 @@ Game::Game()
 	score.setText("Score", math::Vector2D(950, 130));
 	score.setScoreText(score.getScore(), math::Vector2D(950, 170));
 
-	//displayLives.stringToBeDisplayed("Lives");
-	//displayLives.setTextAttributes(displayLives.assignFont(ARISTA), sf::Color::Black, 40, math::Vector2D(950, 210));
-	//displayLives.intToString(3);
-	//displayLives.setTextAttributes(displayLives.assignFont(DYMOGBE), sf::Color::Black, 40, math::Vector2D(950, 260));
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+	//INPUT MANAGER SETTINGS !  INPUT MANAGER CLASS IS BUGGY NEEDS FIXING AT SOME POINT
+
+	//displayInput.resize(1);
+	//displayInput.at(0).stringToBeDisplayed("Lives");
+	//displayInput.at(0).setTextAttributes(displayInput.at(0).assignFont(ARISTA), sf::Color::Black, 40, math::Vector2D(950, 210));
+	
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// textures
@@ -152,17 +155,17 @@ Game::Game()
 	for (int i = 0; i < 3; ++i)
 	{
 		this->wall.at(i).setTexture(this->m_texture->getReference("wall"));
-		wall.at(i).setTextureRect(sf::IntRect(0, 0, wallObject.at(i).getHalfExtents().getX() * 2, wallObject.at(i).getHalfExtents().getY() * 2));
+		wall.at(i).setTextureRect(sf::IntRect((int)0.f, (int)0.f, wallObject.at(i).getHalfExtents().getX() * 2, wallObject.at(i).getHalfExtents().getY() * 2));
 		wall.at(i).setPosition(sf::Vector2f(wallObject.at(i).getPosition().getX(), wallObject.at(i).getPosition().getY()));
 		wall.at(i).setOrigin(wallObject.at(i).getHalfExtents().getX(), wallObject.at(i).getHalfExtents().getY());
 
 	}
 
-	barrier.resize(10);
-	for (int i = 0; i < 10; ++i)
+	barrier.resize(11);
+	for (int i = 0; i < 11; ++i)
 	{
 		this->barrier.at(i).setTexture(this->m_texture->getReference("wall"));
-		barrier.at(i).setTextureRect(sf::IntRect(0, 0, barrierObject.at(i).getHalfExtents().getX() * 2, barrierObject.at(i).getHalfExtents().getY() * 2));
+		barrier.at(i).setTextureRect(sf::IntRect((float)0, (float)0, barrierObject.at(i).getHalfExtents().getX() * 2, barrierObject.at(i).getHalfExtents().getY() * 2));
 		barrier.at(i).setPosition(sf::Vector2f(barrierObject.at(i).getPosition().getX(), barrierObject.at(i).getPosition().getY()));
 		barrier.at(i).setOrigin(barrierObject.at(i).getHalfExtents().getX(), barrierObject.at(i).getHalfExtents().getY());
 		barrier.at(i).setRotation(barrierObject.at(i).getOrientation());
@@ -203,6 +206,27 @@ void Game::fireCanon()
 	canonball.setOrigin(ballObject.getRadius(), ballObject.getRadius());
 	totalScore = 5;
 
+}
+
+void Game::createBarrier(bool entranceBlocked)
+{
+	if (entranceBlocked == true)
+	{
+		barrierObject.at(10) = Barrier(20, 5, math::Vector2D(770, 195), 0);
+		barrierObject.at(10).setElasticity(0.6f);
+		barrierObject.at(10).setDensity(0.8f);
+		barrierObject.at(10).setMass(barrierObject.at(0).getDensity());
+
+		this->barrier.at(10).setTexture(this->m_texture->getReference("wall"));
+		barrier.at(10).setTextureRect(sf::IntRect((float)0, (float)0, barrierObject.at(10).getHalfExtents().getX() * 2, barrierObject.at(10).getHalfExtents().getY() * 2));
+		barrier.at(10).setPosition(sf::Vector2f(barrierObject.at(10).getPosition().getX(), barrierObject.at(10).getPosition().getY()));
+		barrier.at(10).setOrigin(barrierObject.at(10).getHalfExtents().getX(), barrierObject.at(10).getHalfExtents().getY());
+		barrier.at(10).setRotation(barrierObject.at(10).getOrientation());
+	}
+	else if(entranceBlocked == false)
+	{
+		//delete &barrierObject.at(10);
+	}
 }
 
 void Game::firePaddle()
@@ -321,10 +345,18 @@ void Game::draw(sf::RenderTarget &target, sf::RenderStates states) const
 	target.draw(gameInfo);
 	target.draw(scoreFrame);
 	target.draw(score);
-	//target.draw(displayLives);
 	target.draw(ballObject);
 	target.draw(canonball);
+	///////////////////////////////////////////////////////////////////////////////////////////////
 
+	//Display Input on to the Screen
+	std::vector<InputManager>::const_iterator InputIter;
+	for (InputIter = displayInput.cbegin(); InputIter != displayInput.cend(); ++InputIter)
+	{
+		target.draw(*InputIter);
+	}
+
+	///////////////////////////////////////////////////////////////////////////////////////////////
 	std::vector<Walls>::const_iterator WallIter;
 	for (WallIter = wallObject.cbegin(); WallIter != wallObject.cend(); ++WallIter)
 	{
@@ -394,7 +426,7 @@ void Game::checkCollision()
 
 	for (int i = 0; i < 1; ++i)
 	{
-		for (int j = 0; j < 10; ++j)
+		for (int j = 0; j < 11; ++j)
 		{
 			collisions.ball_vs_barriers(&ballObject, &barrierObject.at(j));
 			if (collisions.ball_vs_barriers(&ballObject, &barrierObject.at(j)))

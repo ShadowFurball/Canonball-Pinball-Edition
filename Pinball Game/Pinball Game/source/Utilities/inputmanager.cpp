@@ -2,7 +2,6 @@
 
 InputManager::InputManager()
 {
-	m_text = "";
 	m_number = 0;
 }
 
@@ -14,6 +13,8 @@ InputManager::~InputManager()
 void InputManager::stringToBeDisplayed(std::string text)
 {
 	m_text = text;
+	m_textType.setString(text);
+
 }
 
 void InputManager::integerToBeDisplayed(int number)
@@ -42,6 +43,7 @@ std::string InputManager::intToString(int number)
 	std::string convertedString;
 	convertedString = std::to_string(getInterger());
 
+	m_textType.setString(convertedString);
 	return convertedString;
 }
 

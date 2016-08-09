@@ -150,6 +150,7 @@
     <ClInclude Include="include\Physics\collisionmanager.h" />
     <ClInclude Include="include\Physics\movable.h" />
     <ClInclude Include="include\Physics\obb.h" />
+    <ClInclude Include="include\Utilities\button.h" />
     <ClInclude Include="include\Utilities\filemanager.h" />
     <ClInclude Include="include\Utilities\inputmanager.h" />
     <ClInclude Include="include\Utilities\screenmanager.h" />

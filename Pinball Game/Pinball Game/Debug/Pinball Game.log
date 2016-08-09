@@ -1,3 +1,6 @@
-﻿  gamescreen.cpp
-  Pinball Game.vcxproj -> C:\Users\Tarkan\Desktop\Game Development\Canonball-Pinball-Edition\Pinball Game\Debug\Pinball Game.exe
-  Pinball Game.vcxproj -> C:\Users\Tarkan\Desktop\Game Development\Canonball-Pinball-Edition\Pinball Game\Debug\Pinball Game.pdb (Partial PDB)
+﻿  game.cpp
+c:\users\tarkan\desktop\game-development\canonball-pinball-edition\pinball game\pinball game\source\game\game_main\game.cpp(158): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\tarkan\desktop\game-development\canonball-pinball-edition\pinball game\pinball game\source\game\game_main\game.cpp(168): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\tarkan\desktop\game-development\canonball-pinball-edition\pinball game\pinball game\source\game\game_main\game.cpp(221): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Pinball Game.vcxproj -> C:\Users\Tarkan\Desktop\Game-Development\Canonball-Pinball-Edition\Pinball Game\Debug\Pinball Game.exe
+  Pinball Game.vcxproj -> C:\Users\Tarkan\Desktop\Game-Development\Canonball-Pinball-Edition\Pinball Game\Debug\Pinball Game.pdb (Partial PDB)

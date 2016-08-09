@@ -39,6 +39,8 @@ class Game : public sf::Drawable
 		void restart(bool);
 		bool getIsEnded();
 
+		void createBarrier(bool entranceBlocked);
+
 		void firePaddle();
 		void resetPaddle();
 
@@ -64,7 +66,7 @@ class Game : public sf::Drawable
 		std::vector<PaddleScrew> paddleScrewObject;
 		Launcher launcherObject;
 		void load_textures();
-		//InputManager displayLives;
+		std::vector<InputManager> displayInput;
 
 
 		int totalScore;

@@ -165,6 +165,9 @@
     <ClInclude Include="include\Graphics\Windows\startscreen.h">
       <Filter>Header Files\Graphics\Windows</Filter>
     </ClInclude>
+    <ClInclude Include="include\Utilities\button.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Graphics\shape.cpp">

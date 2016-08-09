@@ -1,4 +1,5 @@
 #include<Graphics\Windows\gamescreen.h>
+#include <Windows.h>
 
 GameScreen::GameScreen()
 {	
@@ -75,9 +76,13 @@ void GameScreen::runGameScreen()
 	m_window.create(sf::VideoMode(getWindowWidth(), getWindowHeight()), "Canonball");
 	sf::Clock gameTime;
 	sf::Clock scoreTimer;
+	sf::Clock delayTimer;
+	bool delayTimerEvent = false;
 
 
-	bool canonFired;
+	bool entranceBlocked = false;
+
+	bool canonFired = false;
 	bool paddleFired = false;
 	bool restert = false;
 	game_state = INITIALISE;
@@ -95,10 +100,13 @@ void GameScreen::runGameScreen()
 				if (canonFired == false)
 				{
 					game.fireCanon();
+					delayTimerEvent = true;
+					delayTimer.restart();
 					canonFired = true;
 				}
-
+				
 			}
+
 			if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
 			{
 				m_window.close();
@@ -140,6 +148,23 @@ void GameScreen::runGameScreen()
 
 		case GAME_MAIN:
 		{
+			float delay = delayTimer.getElapsedTime().asSeconds();
+			if (delayTimerEvent == true)
+			{
+				//delay = 0;
+
+				if (delay >= 0.7)
+				{
+					if (delay >= 0.7)
+					{
+						delay = (float)0.7;
+					}
+					entranceBlocked = true;
+					game.createBarrier(entranceBlocked);
+				}
+
+				//delayTimerEvent = false;
+			}
 			paddleFired = true;
 			float elapsedTime = gameTime.getElapsedTime().asSeconds();
 
@@ -187,6 +212,7 @@ void GameScreen::runGameScreen()
 			if (game_state == GAME_END)
 			{
 				game.resetBall();
+				entranceBlocked = false;
 				game_state = INITIALISE;
 			}
 		}	break;
