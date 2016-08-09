@@ -248,5 +248,8 @@
     <ClCompile Include="source\Game\Game_Info\lives.cpp">
       <Filter>Source Files\Game\Game Info</Filter>
     </ClCompile>
+    <ClCompile Include="include\Utilities\button.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

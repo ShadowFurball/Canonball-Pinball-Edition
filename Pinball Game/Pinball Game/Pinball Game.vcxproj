@@ -156,6 +156,7 @@
     <ClInclude Include="include\Utilities\screenmanager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="include\Utilities\button.cpp" />
     <ClCompile Include="source\Game\Game_Info\lives.cpp" />
     <ClCompile Include="source\Game\Game_Info\score.cpp" />
     <ClCompile Include="source\Game\Game_Main\background.cpp" />
