@@ -1,8 +1,44 @@
-﻿  gamescreen.cpp
+﻿  lives.cpp
+  score.cpp
+  background.cpp
+  game.cpp
+source\Game\Game_Main\game.cpp(158): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+source\Game\Game_Main\game.cpp(168): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+source\Game\Game_Main\game.cpp(221): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  main.cpp
+  menu.cpp
+source\Game\Game_Main\menu.cpp(26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+source\Game\Game_Main\menu.cpp(31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+source\Game\Game_Main\menu.cpp(36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  ball.cpp
+  barriers.cpp
+  bumper.cpp
+  launcher.cpp
+  paddle.cpp
+  paddlescrew.cpp
+  walls.cpp
+  circle.cpp
+  rectangle.cpp
+  shape.cpp
+  texturemanager.cpp
+  gamescreen.cpp
+  startscreen.cpp
+  button.cpp
+source\GUI\button.cpp(14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+source\GUI\button.cpp(15): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Compiling...
+  vec2.cpp
+  aabb.cpp
+  collidable.cpp
+  collisionmanager.cpp
+  movable.cpp
+  obb.cpp
+  inputmanager.cpp
+  screenmanager.cpp
   Generating code
-  1 of 1056 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    2 functions had inline decision re-evaluated but remain unchanged
+  254 of 1300 functions (19.5%) were compiled, the rest were copied from previous compilation.
+    244 functions were new in current compilation
+    100 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Pinball Game.vcxproj -> C:\Users\Tarkan\Desktop\Game-Development\Canonball-Pinball-Edition\Pinball Game\Release\Pinball Game.exe
   Pinball Game.vcxproj -> C:\Users\Tarkan\Desktop\Game-Development\Canonball-Pinball-Edition\Pinball Game\Release\Pinball Game.pdb (Full PDB)

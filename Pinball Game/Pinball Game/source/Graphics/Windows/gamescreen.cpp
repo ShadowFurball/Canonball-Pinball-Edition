@@ -72,28 +72,26 @@ void GameScreen::runMenuScreen()
 {
 	Menu menu;
 
-	//setWindowWidth(600);
-	//setWindowHeight(700);
-	//m_window.setSize(sf::Vector2u(getWindowWidth(), getWindowHeight()));
-	//m_window.create(sf::VideoMode(getWindowWidth(), getWindowHeight()), "Canonball");
-
 	while (m_window.isOpen())
 	{
 		sf::Event event;
 		while (m_window.pollEvent(event))
 		{
+			// Window is Shut
 			if (event.type == sf::Event::Closed)
 			{
 				menu.deleteObjects();
 				m_window.close();
 			}
 
+			// Shut window using ESC key
 			if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
 			{
 				menu.deleteObjects();
 				m_window.close();
 			}
 
+			// Mouse click events to work with Buttons
 			if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 			{
 				sf::Vector2f mouse = m_window.mapPixelToCoords(sf::Mouse::getPosition(m_window));
@@ -111,7 +109,6 @@ void GameScreen::runMenuScreen()
 					menu.deleteObjects();
 					m_window.close();
 				}
-				
 			}
 		}
 
