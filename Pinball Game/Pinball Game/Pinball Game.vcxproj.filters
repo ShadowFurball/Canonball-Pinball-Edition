@@ -79,6 +79,12 @@
     <Filter Include="Source Files\Game\Game Info">
       <UniqueIdentifier>{45d6873a-2340-4855-86fb-e696ec536989}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\GUI">
+      <UniqueIdentifier>{b4231c19-5345-4aa1-a3c0-ca4f1be6b9dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUI">
+      <UniqueIdentifier>{104ecd35-18a4-4615-ade9-9796fce388ec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Math_Lib\vec2.h">
@@ -165,8 +171,11 @@
     <ClInclude Include="include\Graphics\Windows\startscreen.h">
       <Filter>Header Files\Graphics\Windows</Filter>
     </ClInclude>
-    <ClInclude Include="include\Utilities\button.h">
-      <Filter>Header Files\Utils</Filter>
+    <ClInclude Include="include\GUI\button.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Game\Game_Main\menu.h">
+      <Filter>Header Files\Game\Game Main</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -248,8 +257,11 @@
     <ClCompile Include="source\Game\Game_Info\lives.cpp">
       <Filter>Source Files\Game\Game Info</Filter>
     </ClCompile>
-    <ClCompile Include="include\Utilities\button.cpp">
-      <Filter>Source Files\Utils</Filter>
+    <ClCompile Include="source\GUI\button.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Game\Game_Main\menu.cpp">
+      <Filter>Source Files\Game\Game Main</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

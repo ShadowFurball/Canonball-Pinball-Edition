@@ -131,6 +131,7 @@
     <ClInclude Include="include\Game\Game_Info\score.h" />
     <ClInclude Include="include\Game\Game_Main\background.h" />
     <ClInclude Include="include\Game\Game_Main\game.h" />
+    <ClInclude Include="include\Game\Game_Main\menu.h" />
     <ClInclude Include="include\Game\Game_Objects\ball.h" />
     <ClInclude Include="include\Game\Game_Objects\barriers.h" />
     <ClInclude Include="include\Game\Game_Objects\bumper.h" />
@@ -144,24 +145,24 @@
     <ClInclude Include="include\Graphics\Texture\texturemanager.h" />
     <ClInclude Include="include\Graphics\Windows\gamescreen.h" />
     <ClInclude Include="include\Graphics\Windows\startscreen.h" />
+    <ClInclude Include="include\GUI\button.h" />
     <ClInclude Include="include\Math_Lib\vec2.h" />
     <ClInclude Include="include\Physics\aabb.h" />
     <ClInclude Include="include\Physics\collidable.h" />
     <ClInclude Include="include\Physics\collisionmanager.h" />
     <ClInclude Include="include\Physics\movable.h" />
     <ClInclude Include="include\Physics\obb.h" />
-    <ClInclude Include="include\Utilities\button.h" />
     <ClInclude Include="include\Utilities\filemanager.h" />
     <ClInclude Include="include\Utilities\inputmanager.h" />
     <ClInclude Include="include\Utilities\screenmanager.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="include\Utilities\button.cpp" />
     <ClCompile Include="source\Game\Game_Info\lives.cpp" />
     <ClCompile Include="source\Game\Game_Info\score.cpp" />
     <ClCompile Include="source\Game\Game_Main\background.cpp" />
     <ClCompile Include="source\Game\Game_Main\game.cpp" />
     <ClCompile Include="source\Game\Game_Main\main.cpp" />
+    <ClCompile Include="source\Game\Game_Main\menu.cpp" />
     <ClCompile Include="source\Game\Game_Objects\ball.cpp" />
     <ClCompile Include="source\Game\Game_Objects\barriers.cpp" />
     <ClCompile Include="source\Game\Game_Objects\bumper.cpp" />
@@ -175,6 +176,7 @@
     <ClCompile Include="source\Graphics\Texture\texturemanager.cpp" />
     <ClCompile Include="source\Graphics\Windows\gamescreen.cpp" />
     <ClCompile Include="source\Graphics\Windows\startscreen.cpp" />
+    <ClCompile Include="source\GUI\button.cpp" />
     <ClCompile Include="source\Math_Lib\vec2.cpp" />
     <ClCompile Include="source\Physics\aabb.cpp" />
     <ClCompile Include="source\Physics\collidable.cpp" />

@@ -29,7 +29,7 @@ GameScreen::GameScreen()
 		break;
 
 	case GAME_SREEN:
-		runGameScreen();
+		runMenuScreen();
 		break;
 	}
 }
@@ -57,7 +57,7 @@ void GameScreen::runStartScreen()
 
 				if (game_screens == GAME_SREEN)
 				{
-					runGameScreen();
+					runMenuScreen();
 				}
 			}
 		}
@@ -223,6 +223,40 @@ void GameScreen::runGameScreen()
 		m_window.draw(game);
 		m_window.display();
 		
+	}
+}
+
+void GameScreen::runMenuScreen()
+{
+	Menu menu;
+
+	//setWindowWidth(600);
+	//setWindowHeight(700);
+	//m_window.setSize(sf::Vector2u(getWindowWidth(), getWindowHeight()));
+	//m_window.create(sf::VideoMode(getWindowWidth(), getWindowHeight()), "Canonball");
+
+	while (m_window.isOpen())
+	{
+		sf::Event event;
+		while (m_window.pollEvent(event))
+		{
+			if (event.type == sf::Event::Closed)
+			{
+				menu.deleteObjects();
+				m_window.close();
+			}
+
+			if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
+			{
+				m_window.close();
+			}
+		}
+
+		m_window.clear();
+		m_window.draw(menu);
+		m_window.display();
+		//menu.deleteObjects();
+
 	}
 }
 

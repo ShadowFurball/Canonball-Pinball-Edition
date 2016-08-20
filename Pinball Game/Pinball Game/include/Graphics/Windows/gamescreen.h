@@ -3,6 +3,7 @@
 
 #include<SFML\Graphics.hpp>
 #include <Game\Game_Main\game.h>
+#include <Game\Game_Main\menu.h>
 #include <Graphics\Windows\startscreen.h>
 
 class GameScreen
@@ -19,6 +20,7 @@ class GameScreen
 		void setWindowWidth(int);
 
 		void runStartScreen();
+		void runMenuScreen();
 		void runGameScreen();
 
 	private:
