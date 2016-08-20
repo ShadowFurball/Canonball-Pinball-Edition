@@ -20,13 +20,14 @@ class Menu : public sf::Drawable
 		void loadTexture();
 		void deleteObjects();
 
+		std::vector<sf::Sprite*> m_pSprites;
+
 	protected:
 
 	private:
 		TextureManager* m_pTextureManager;
-		std::vector<sf::Sprite*> m_pSprites;
-		//std::vector<sf::Text*> m_pText;
-		//std::vector<sf::Font*> m_pFont;
+		std::vector<sf::Text*> m_pText;
+		sf::Font m_Font;
 		std::vector<Button*> m_pButtons;
 
 };

@@ -68,6 +68,61 @@ void GameScreen::runStartScreen()
 	}
 }
 
+void GameScreen::runMenuScreen()
+{
+	Menu menu;
+
+	//setWindowWidth(600);
+	//setWindowHeight(700);
+	//m_window.setSize(sf::Vector2u(getWindowWidth(), getWindowHeight()));
+	//m_window.create(sf::VideoMode(getWindowWidth(), getWindowHeight()), "Canonball");
+
+	while (m_window.isOpen())
+	{
+		sf::Event event;
+		while (m_window.pollEvent(event))
+		{
+			if (event.type == sf::Event::Closed)
+			{
+				menu.deleteObjects();
+				m_window.close();
+			}
+
+			if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
+			{
+				menu.deleteObjects();
+				m_window.close();
+			}
+
+			if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+			{
+				sf::Vector2f mouse = m_window.mapPixelToCoords(sf::Mouse::getPosition(m_window));
+				sf::FloatRect PlayButton = menu.m_pSprites.at(1)->getGlobalBounds();
+				sf::FloatRect OptionsButton = menu.m_pSprites.at(2)->getGlobalBounds();
+				sf::FloatRect QuitButton = menu.m_pSprites.at(3)->getGlobalBounds();
+
+				if (PlayButton.contains(mouse))
+				{
+					runGameScreen();
+				}
+
+				if (QuitButton.contains(mouse))
+				{
+					menu.deleteObjects();
+					m_window.close();
+				}
+				
+			}
+		}
+
+		m_window.clear();
+		m_window.draw(menu);
+		m_window.display();
+		//menu.deleteObjects();
+
+	}
+}
+
 void GameScreen::runGameScreen()
 {
 	setWindowWidth(1300);
@@ -223,40 +278,6 @@ void GameScreen::runGameScreen()
 		m_window.draw(game);
 		m_window.display();
 		
-	}
-}
-
-void GameScreen::runMenuScreen()
-{
-	Menu menu;
-
-	//setWindowWidth(600);
-	//setWindowHeight(700);
-	//m_window.setSize(sf::Vector2u(getWindowWidth(), getWindowHeight()));
-	//m_window.create(sf::VideoMode(getWindowWidth(), getWindowHeight()), "Canonball");
-
-	while (m_window.isOpen())
-	{
-		sf::Event event;
-		while (m_window.pollEvent(event))
-		{
-			if (event.type == sf::Event::Closed)
-			{
-				menu.deleteObjects();
-				m_window.close();
-			}
-
-			if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
-			{
-				m_window.close();
-			}
-		}
-
-		m_window.clear();
-		m_window.draw(menu);
-		m_window.display();
-		//menu.deleteObjects();
-
 	}
 }
 

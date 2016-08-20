@@ -34,7 +34,41 @@ Menu::Menu()
 	this->m_pSprites.at(3)->setTexture(this->m_pTextureManager->getReference("Button"));
 	m_pSprites.at(3)->setPosition(m_pButtons.at(2)->getPosition().getX(), m_pButtons.at(2)->getPosition().getY());
 	m_pSprites.at(3)->setOrigin(m_pButtons.at(2)->getWidth() / 2, m_pButtons.at(2)->getHeight() / 2);
+	
 	/////////////////////////////////////////////////////////////////////////////////////
+	//
+	// FONTS & TEXT
+	m_pText.resize(3);
+	
+	// Fonts
+	m_Font.loadFromFile("font\\Longhaul.ttf");
+
+	//Text
+	m_pText.at(0) = new sf::Text;
+	m_pText.at(0)->setFont(m_Font);
+	m_pText.at(0)->setString("Play");
+	m_pText.at(0)->setCharacterSize(30);
+	m_pText.at(0)->setColor(sf::Color::Black);
+	m_pText.at(0)->setPosition((m_pSprites.at(1)->getPosition().x + 45), (m_pSprites.at(1)->getPosition().y));
+	m_pText.at(0)->setOrigin(m_pSprites.at(1)->getOrigin());
+
+	m_pText.at(1) = new sf::Text;
+	m_pText.at(1)->setFont(m_Font);
+	m_pText.at(1)->setString("Options");
+	m_pText.at(1)->setCharacterSize(30);
+	m_pText.at(1)->setColor(sf::Color::Black);
+	m_pText.at(1)->setPosition((m_pSprites.at(2)->getPosition().x + 20), (m_pSprites.at(2)->getPosition().y));
+	m_pText.at(1)->setOrigin(m_pSprites.at(2)->getOrigin());
+
+	m_pText.at(2) = new sf::Text;
+	m_pText.at(2)->setFont(m_Font);
+	m_pText.at(2)->setString("Quit");
+	m_pText.at(2)->setCharacterSize(30);
+	m_pText.at(2)->setColor(sf::Color::Black);
+	m_pText.at(2)->setPosition((m_pSprites.at(3)->getPosition().x - 35), (m_pSprites.at(3)->getPosition().y - 15));
+	m_pText.at(0)->setOrigin(m_pSprites.at(3)->getOrigin());
+
+
 }
 
 Menu::~Menu()
@@ -64,6 +98,13 @@ void Menu::deleteObjects()
 	}
 	m_pSprites.clear();
 
+	std::vector<sf::Text*>::iterator text;
+	for (text = m_pText.begin(); text != m_pText.end(); ++text)
+	{
+		delete[](*text);
+	}
+	m_pText.clear();
+
 	//delete[] m_pTextureManager;
 }
 
@@ -81,5 +122,11 @@ void Menu::draw(sf::RenderTarget& target, sf::RenderStates states) const
 	for (button = m_pButtons.cbegin(); button != m_pButtons.cend(); ++button)
 	{
 		target.draw(**button); // dereference the iterator and the pointer.
+	}
+
+	std::vector<sf::Text*>::const_iterator text;
+	for (text = m_pText.cbegin(); text != m_pText.cend(); ++text)
+	{
+		target.draw(**text);
 	}
 }
