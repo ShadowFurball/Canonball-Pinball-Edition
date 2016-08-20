@@ -14,7 +14,7 @@ Button::Button(int width, int height, math::Vector2D position)
 	m_ButtonShape.setSize(sf::Vector2f(width, height));
 	m_ButtonShape.setOrigin((width / 2 ), (height / 2));
 	m_ButtonShape.setPosition(position.getX(), position.getY());
-	//m_ButtonShape.setFillColor(sf::Color::Transparent);
+	m_ButtonShape.setFillColor(sf::Color::Transparent);
 }
 
 Button::~Button()

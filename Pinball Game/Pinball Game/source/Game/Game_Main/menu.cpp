@@ -4,9 +4,9 @@ Menu::Menu()
 {
 	//Button Objects
 	m_pButtons.resize(3);
-	m_pButtons.at(0) = new Button(100, 18.5, math::Vector2D(250, 180));
-	m_pButtons.at(1) = new Button(100, 18.5, math::Vector2D(250, 210));
-	m_pButtons.at(2) = new Button(100, 18.5, math::Vector2D(250, 250));
+	m_pButtons.at(0) = new Button(148, 39, math::Vector2D(250, 150));
+	m_pButtons.at(1) = new Button(148, 39, math::Vector2D(250, 200));
+	m_pButtons.at(2) = new Button(148, 39, math::Vector2D(250, 250));
 
 	//////////////////////////////////////////////////////////////////////////////////////
 	//Textures
@@ -14,15 +14,26 @@ Menu::Menu()
 	this->loadTexture();
 
 	//Main Menu Textures
-	m_pSprites.resize(2);
+	m_pSprites.resize(4);
+
+	//Background Sprites
 	this->m_pSprites.at(0) = new sf::Sprite;
 	this->m_pSprites.at(0)->setTexture(this->m_pTextureManager->getReference("Main Menu"));
+	//Button Sprites
 	this->m_pSprites.at(1) = new sf::Sprite;
 	this->m_pSprites.at(1)->setTexture(this->m_pTextureManager->getReference("Button"));
 	m_pSprites.at(1)->setPosition(m_pButtons.at(0)->getPosition().getX(), m_pButtons.at(0)->getPosition().getY());
 	m_pSprites.at(1)->setOrigin(m_pButtons.at(0)->getWidth() / 2, m_pButtons.at(0)->getHeight() / 2);
 	
+	this->m_pSprites.at(2) = new sf::Sprite;
+	this->m_pSprites.at(2)->setTexture(this->m_pTextureManager->getReference("Button"));
+	m_pSprites.at(2)->setPosition(m_pButtons.at(1)->getPosition().getX(), m_pButtons.at(1)->getPosition().getY());
+	m_pSprites.at(2)->setOrigin(m_pButtons.at(1)->getWidth() / 2, m_pButtons.at(1)->getHeight() / 2);
 
+	this->m_pSprites.at(3) = new sf::Sprite;
+	this->m_pSprites.at(3)->setTexture(this->m_pTextureManager->getReference("Button"));
+	m_pSprites.at(3)->setPosition(m_pButtons.at(2)->getPosition().getX(), m_pButtons.at(2)->getPosition().getY());
+	m_pSprites.at(3)->setOrigin(m_pButtons.at(2)->getWidth() / 2, m_pButtons.at(2)->getHeight() / 2);
 	/////////////////////////////////////////////////////////////////////////////////////
 }
 
