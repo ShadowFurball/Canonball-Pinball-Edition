@@ -5,6 +5,8 @@
 #include <Game\Game_Main\game.h>
 #include <Game\Game_Main\menu.h>
 #include <Graphics\Windows\startscreen.h>
+#include <Optimize\schedule.h>
+#include <Optimize\scheduler.h>
 
 class GameScreen
 {
@@ -25,11 +27,12 @@ class GameScreen
 
 	private:
 		sf::RenderWindow m_window;
+
 		int m_windowHeight;
 		int m_windowWidth;
+
 		gamestate game_state;
 		GameWindow game_screens;
-
 		Game game;
 		StartScreen startScreen;
 };

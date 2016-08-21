@@ -305,8 +305,7 @@ bool Game::getIsEnded()
 
 void Game::onUpdate(const SchedulerTimerInfo& info)
 {
-	update();
-	updateMovable(info.TimeFrameStart.count());
+	// Updating game here
 }
 
 void Game::rotate(math::Vector2D point, math::Vector2D centre, float angle)

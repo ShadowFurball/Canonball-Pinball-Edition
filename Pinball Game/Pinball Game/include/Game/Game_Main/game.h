@@ -21,8 +21,9 @@
 #include <Game\Game_Info\lives.h>
 #include<Game\Game_Info\score.h>
 #include<vector>
+#include <Optimize\schedule.h>
 
-class Game : public sf::Drawable
+class Game : public sf::Drawable, public Schedule
 {
 	public:
 		Game();
@@ -43,6 +44,8 @@ class Game : public sf::Drawable
 
 		void firePaddle();
 		void resetPaddle();
+
+		virtual void onUpdate(const SchedulerTimerInfo& info);
 
 	protected:
 		TextureManager *m_texture;
