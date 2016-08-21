@@ -85,6 +85,12 @@
     <Filter Include="Source Files\GUI">
       <UniqueIdentifier>{104ecd35-18a4-4615-ade9-9796fce388ec}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Optimise">
+      <UniqueIdentifier>{4ff65d3e-d873-40b6-8373-d02135a4f472}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Optimise">
+      <UniqueIdentifier>{c8236cb7-7382-4652-a8c5-b2f59ab30938}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Math_Lib\vec2.h">
@@ -177,6 +183,27 @@
     <ClInclude Include="include\Game\Game_Main\menu.h">
       <Filter>Header Files\Game\Game Main</Filter>
     </ClInclude>
+    <ClInclude Include="include\Optimize\rate.h">
+      <Filter>Header Files\Optimise</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Optimize\schedule.h">
+      <Filter>Header Files\Optimise</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Optimize\schedule_info.h">
+      <Filter>Header Files\Optimise</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Optimize\scheduler.h">
+      <Filter>Header Files\Optimise</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Optimize\scheduler_listener.h">
+      <Filter>Header Files\Optimise</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Optimize\scheduler_messages.h">
+      <Filter>Header Files\Optimise</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Optimize\scheduler_timer_info.h">
+      <Filter>Header Files\Optimise</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Graphics\shape.cpp">
@@ -262,6 +289,12 @@
     </ClCompile>
     <ClCompile Include="source\Game\Game_Main\menu.cpp">
       <Filter>Source Files\Game\Game Main</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Optimise\rate.cpp">
+      <Filter>Source Files\Optimise</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Optimise\scheduler.cpp">
+      <Filter>Source Files\Optimise</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

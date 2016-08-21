@@ -150,6 +150,13 @@
     <ClInclude Include="include\Graphics\Windows\startscreen.h" />
     <ClInclude Include="include\GUI\button.h" />
     <ClInclude Include="include\Math_Lib\vec2.h" />
+    <ClInclude Include="include\Optimize\rate.h" />
+    <ClInclude Include="include\Optimize\schedule.h" />
+    <ClInclude Include="include\Optimize\scheduler.h" />
+    <ClInclude Include="include\Optimize\scheduler_listener.h" />
+    <ClInclude Include="include\Optimize\scheduler_messages.h" />
+    <ClInclude Include="include\Optimize\scheduler_timer_info.h" />
+    <ClInclude Include="include\Optimize\schedule_info.h" />
     <ClInclude Include="include\Physics\aabb.h" />
     <ClInclude Include="include\Physics\collidable.h" />
     <ClInclude Include="include\Physics\collisionmanager.h" />
@@ -181,6 +188,8 @@
     <ClCompile Include="source\Graphics\Windows\startscreen.cpp" />
     <ClCompile Include="source\GUI\button.cpp" />
     <ClCompile Include="source\Math_Lib\vec2.cpp" />
+    <ClCompile Include="source\Optimise\rate.cpp" />
+    <ClCompile Include="source\Optimise\scheduler.cpp" />
     <ClCompile Include="source\Physics\aabb.cpp" />
     <ClCompile Include="source\Physics\collidable.cpp" />
     <ClCompile Include="source\Physics\collisionmanager.cpp" />
